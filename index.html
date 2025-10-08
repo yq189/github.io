@@ -4,7 +4,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  max-width: 100%;
+  max-width: 800px;
   margin: 20px auto;
   padding: 0 15px;
   background-color: #f9f9f9;
@@ -24,7 +24,20 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
-
+@media (max-width: 500px) {
+  body {
+    max-width: 100%;
+    font-size: 18px;
+  }
+  button {
+    font-size: 22px;
+    padding: 18px 35px;
+  }
+  img {
+    width: 90%;
+    height: auto;
+  }
+}
 button:hover {
   background-color: #45a049;
 }
@@ -47,7 +60,7 @@ img {
   <h2>入群联系群主</h2>
   <p>扣扣群<strong id="qq-group">983688374</strong></p>
   <button onclick="copyQQ()">点击复制群号</button>
-  <button font-size: 30px;border-radius: 6px;margin: 10px 0;/button>
+  <style>button { font-size: 30px;border-radius: 6px;margin: 10px 0; }</style>
 <script>
 function copyQQ(){
   const id = document.getElementById('qq-group').innerText.trim();
@@ -63,6 +76,7 @@ function copyQQ(){
 </body>
 
 </html>
+
 
 
 
